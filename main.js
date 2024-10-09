@@ -9,6 +9,7 @@ const nomeInUscitaEl = document.querySelector('.nomeInUscita');
 const costoBigliettoEl = document.querySelector('.costoBiglietto');
 const offertaEl = document.querySelector('.offerta');
 const carrozzaEl = document.querySelector('.carrozza');
+const codiceCpEl = document.querySelector('.codiceCp');
 
 
  formEl.addEventListener('submit', function(e){
@@ -48,7 +49,12 @@ const carrozzaEl = document.querySelector('.carrozza');
         return Math.floor(Math.random() * 30) + 1;
     }
     carrozzaEl.append(numeroCarrozza())
+    
     //codice cp
+    function codiceCpNumber() {
+        return Math.floor(Math.random() * 300000) + 1;
+    }
+    codiceCpEl.append(codiceCpNumber());
     
     //costo biglietto
     let exitPrice = totalPrice.valueOf();
