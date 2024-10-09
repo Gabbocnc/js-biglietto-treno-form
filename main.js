@@ -26,7 +26,7 @@ const codiceCpEl = document.querySelector('.codiceCp');
     } else if (etaPasseggero > 65) {
         discount = 0.4 * totalPrice;
     }
-    totalPrice - discount;
+    totalPrice -= discount;
     console.log(totalPrice.toFixed(2));
 
     //nome in uscita
@@ -58,7 +58,7 @@ const codiceCpEl = document.querySelector('.codiceCp');
     
     //costo biglietto
     let exitPrice = totalPrice.valueOf();
-    costoBigliettoEl.append(exitPrice);
+    costoBigliettoEl.append('€'+(exitPrice.toFixed(2)));
 
     
 
