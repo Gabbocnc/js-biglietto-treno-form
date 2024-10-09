@@ -5,14 +5,20 @@ const kmDaPercorrereEl = document.querySelector('.kmDaPercorrere');
 const ageEl = document.querySelector('.age');
 const generaEl = document.querySelector('.genera');
 const formEl = document.querySelector('form');
+const nomeInUscitaEl = document.querySelector('.nomeInUscita');
+const costoBigliettoEl = document.querySelector('.costoBiglietto');
+const offertaEl = document.querySelector('.offerta');
 
- 
-generaEl.addEventListener('click', function() {
+
+ formEl.addEventListener('submit', function(e){
+    e.preventDefault()
+   
+
     let km_price = 0.21;
     let totalPrice = Number(kmDaPercorrereEl.value) * km_price;
     let discount= 0;
     let etaPasseggero = Number(ageEl.value);
-    //let ageEl=Number(ageEl)
+  
     if (etaPasseggero < 18) {
         discount = 0.2 * totalPrice;
     } else if (etaPasseggero > 65) {
@@ -20,14 +26,31 @@ generaEl.addEventListener('click', function() {
     }
     totalPrice - discount;
     console.log(totalPrice.toFixed(2));
+
+    //nome in uscita
+    let exitName = nomeCognomeEl.value;
+    nomeInUscitaEl.append(exitName)
+  
+    //offerta
+    let exitAge = ageEl.value
+    if (exitAge < 18){
+        offertaEl.textContent = 'Biglietto Ridotto'
+
+    }else if (exitAge < 65){
+        offertaEl.textContent = 'Biglietto Standard'
+    }else {
+        offertaEl.textContent = 'Biglietto Over'
+    }
+    //carrozza
+    //codice cp
     
-})
+    //costo biglietto
+    let exitPrice = totalPrice.valueOf();
+    costoBigliettoEl.append(exitPrice);
 
+    
 
- formEl.addEventListener('submit', function(e){
-    e.preventDefault()
  })
-
 
 
 

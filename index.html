@@ -12,6 +12,7 @@
 
 <body>
     <main>
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <form class="row g-3 needs-validation" novalidate>
           <div class="col-md-4">
             <label for="nomeCognome" class="form-label">Nome Cognome</label>
@@ -29,8 +30,36 @@
           </div>
           <div class="col-12">
             <button class="btn btn-primary genera" type="submit">Genera</button>
+            <button class="btn btn-secondary reset" type="reset">Annulla</button>
           </div>
         </form>
+        <div class="result row mt-5 row-gap-4">
+            <H1>IL TUO BIGLIETTO</H1>
+            <H3>DETTAGLIO PASSEGGERI</H3>
+            <div class="col-3">
+                <P>NOME PASSEGGERO</P>
+                <p class="nomeInUscita"></p>
+            </div>
+            <div class="col-8 d-flex">
+                <div>
+                    Offerta
+                    <p class="offerta"></p>
+                </div>
+                <div>
+                    Carrozza
+                    <p class="carrozza"></p>
+                </div>
+                <div>
+                    Codice Cp
+                    <p class="codiceCp"></p>
+                </div>
+                <div>
+                    Costo biglietto
+                    <p class="costoBiglietto"></p>
+                </div>
+            </div>
+           
+        </div>
 
     </main>
     <script src="./main.js"></script>
