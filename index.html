@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <main>
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <form class="row g-3 needs-validation" novalidate>
+    <main class="bg-danger text-center">
+        <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <form class="row g-3 needs-validation bg-dark text-light mt-5" novalidate>
           <div class="col-md-4">
             <label for="nomeCognome" class="form-label">Nome Cognome</label>
             <input type="text" class="nomeCognome" id="nomeCognome" value="" required>
@@ -28,34 +28,34 @@
            
           </div>
           </div>
-          <div class="col-12">
-            <button class="btn btn-primary genera" type="submit">Genera</button>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary genera m-3" type="submit">Genera</button>
             <button class="btn btn-secondary reset" type="reset">Annulla</button>
           </div>
         </form>
-        <div class="result row mt-5 row-gap-4">
-            <H1>IL TUO BIGLIETTO</H1>
+        <div class="result row mt-5 row-gap-4 bg-dark text-white">
+            <H1 class="text-center">IL TUO BIGLIETTO</H1>
             <H3>DETTAGLIO PASSEGGERI</H3>
-            <div class="col-3">
+            <div class="col-3 bg-danger">
                 <P>NOME PASSEGGERO</P>
-                <p class="nomeInUscita"></p>
+                <p class="nomeInUscita mt-2"></p>
             </div>
-            <div class="col-8 d-flex">
+            <div class="col-8 d-flex gap-5 ms-5 justify-content-around">
                 <div>
                     Offerta
-                    <p class="offerta"></p>
+                    <p class="offerta mt-2"></p>
                 </div>
                 <div>
                     Carrozza
-                    <p class="carrozza"></p>
+                    <p class="carrozza mt-2"></p>
                 </div>
                 <div>
                     Codice Cp
-                    <p class="codiceCp"></p>
+                    <p class="codiceCp mt-2"></p>
                 </div>
                 <div>
                     Costo biglietto
-                    <p class="costoBiglietto"></p>
+                    <p class="costoBiglietto mt-2"></p>
                 </div>
             </div>
         </div>
