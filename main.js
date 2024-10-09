@@ -31,34 +31,34 @@ const codiceCpEl = document.querySelector('.codiceCp');
 
     //nome in uscita
     let exitName = nomeCognomeEl.value;
-    nomeInUscitaEl.append(exitName)
+    nomeInUscitaEl.innerHTML += exitName + '<br>';
   
     //offerta
     let exitAge = ageEl.value
     if (exitAge < 18){
-        offertaEl.textContent = 'Biglietto Ridotto'
+        offertaEl.innerHTML += 'Biglietto Ridotto<br>';
 
     }else if (exitAge < 65){
-        offertaEl.textContent = 'Biglietto Standard'
+        offertaEl.innerHTML += 'Biglietto Standard<br>';
     }else {
-        offertaEl.textContent = 'Biglietto Over'
+        offertaEl.innerHTML += 'Biglietto Over<br>'
     }
     
     //carrozza
     function numeroCarrozza() {
         return Math.floor(Math.random() * 30) + 1;
     }
-    carrozzaEl.append(numeroCarrozza())
+    carrozzaEl.innerHTML += 'Carrozza: ' + numeroCarrozza() + '<br>';
     
     //codice cp
     function codiceCpNumber() {
         return Math.floor(Math.random() * 300000) + 1;
     }
-    codiceCpEl.append(codiceCpNumber());
+    codiceCpEl.innerHTML += 'Codice CP: ' + codiceCpNumber() + '<br>'; 
     
     //costo biglietto
     let exitPrice = totalPrice.valueOf();
-    costoBigliettoEl.append('€'+(exitPrice.toFixed(2)));
+    costoBigliettoEl.innerHTML += 'Costo Biglietto: €' + (exitPrice.toFixed(2)) + '<br>'; 
 
     
 
