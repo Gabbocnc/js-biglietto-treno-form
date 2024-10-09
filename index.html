@@ -11,14 +11,26 @@
 </head>
 
 <body>
-
     <main>
-
-        <input type="text" class="nomeCognome" placeholder="Nome Cognome" value="">
-        <input type="number" class="kmDaPercorrere" placeholder="Km da percorrere" value="">
-        <input type="number" class="age" placeholder="Età" value="">
-        <button class="genera">Genera</button>
-
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="nomeCognome" class="form-label">Nome Cognome</label>
+            <input type="text" class="nomeCognome" id="nomeCognome" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="kmDaPercorrere" class="form-label">Km da percorrere</label>
+            <input type="number" class="kmDaPercorrere" id="kmDaPercorrere" value="" required>
+          </div>
+          <div class="col-md-4">
+            <label for="age" class="form-label">Eta'</label>
+            <input type="number" class="age" id="age" value="" required>
+           
+          </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary genera" type="submit">Genera</button>
+          </div>
+        </form>
 
     </main>
     <script src="./main.js"></script>

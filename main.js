@@ -1,9 +1,10 @@
 // MILESTONE 1: Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
-nomeCognomeEl = document.querySelector('.nomeCognome');
-kmDaPercorrereEl = document.querySelector('.kmDaPercorrere');
-ageEl = document.querySelector('.age');
-generaEl = document.querySelector('.genera')
+const nomeCognomeEl = document.querySelector('.nomeCognome');
+const kmDaPercorrereEl = document.querySelector('.kmDaPercorrere');
+const ageEl = document.querySelector('.age');
+const generaEl = document.querySelector('.genera');
+const formEl = document.querySelector('form');
 
  
 generaEl.addEventListener('click', function() {
@@ -21,6 +22,13 @@ generaEl.addEventListener('click', function() {
     console.log(totalPrice.toFixed(2));
     
 })
+
+
+ formEl.addEventListener('submit', function(e){
+    e.preventDefault()
+ })
+
+
 
 
  
