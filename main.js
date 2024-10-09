@@ -8,6 +8,7 @@ const formEl = document.querySelector('form');
 const nomeInUscitaEl = document.querySelector('.nomeInUscita');
 const costoBigliettoEl = document.querySelector('.costoBiglietto');
 const offertaEl = document.querySelector('.offerta');
+const carrozzaEl = document.querySelector('.carrozza');
 
 
  formEl.addEventListener('submit', function(e){
@@ -41,7 +42,12 @@ const offertaEl = document.querySelector('.offerta');
     }else {
         offertaEl.textContent = 'Biglietto Over'
     }
+    
     //carrozza
+    function numeroCarrozza() {
+        return Math.floor(Math.random() * 30) + 1;
+    }
+    carrozzaEl.append(numeroCarrozza())
     //codice cp
     
     //costo biglietto
