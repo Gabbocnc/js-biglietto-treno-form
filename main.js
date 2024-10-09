@@ -10,15 +10,17 @@ generaEl.addEventListener('click', function() {
     let km_price = 0.21;
     let totalPrice = Number(kmDaPercorrereEl.value) * km_price;
     let discount= 0;
-    let age = Number(ageEl.value);
+    generaEl = Number(generaEl.value)
 
-    if (age < 18) {
+    if (ageEl < 18) {
         discount = 0.2 * totalPrice;
-    } else if (age > 65) {
+    } else if (ageEl > 65) {
         discount = 0.4 * totalPrice;
     }
-    totalPrice =- discount;
-    console.log(totalPrice);
+    totalPrice - discount;
+    console.log(totalPrice.toFixed(2));
     
 })
+
+
  
